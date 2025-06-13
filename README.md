@@ -4,7 +4,7 @@
 The objective of this project was to design and implement a robust Library Management System using Object-Oriented Programming principles in C++.
 The system models real-world library operations through three core classes: Book, Member, and Library. The Book class maintains information such as title, author, ISBN, available and total copies, with support for multiple constructors (including copy constructors and default arguments) and data validation to prevent logical inconsistencies (like negative book counts).
 ## Class Definitions
-1.   **Book** - Represents a book in the library.
+1. **`Book`** - Represents a book in the library.
  - **Attributes**:
    - `title` (public, `string`): Title of the book
    - `author` (public, `string`): Author of the book
@@ -31,7 +31,7 @@ The system models real-world library operations through three core classes: Book
   1. No two books can have the same isbn. If the constraint is violated then the book which is being entered into the system later is removed from the system (i.e. only the first book which was present in the system persists and all the later books are not added to the system).
   2. A book's `copiesAvailable` should never exceed `totalCopies` or fall below zero.
  
-2. **Member** – Represents a member of the library.
+2. **`Member`** – Represents a member of the library.
  - **Attributes**:  
    - `memberID` (private, `string`)
    - `name` (public, `string`)
@@ -47,11 +47,11 @@ The system models real-world library operations through three core classes: Book
   2. `bool returnBook(isbn)`: Must allow the member to return a book if they’ve borrowed it. If they haven’t borrowed it then ignore the request and print a message stating `“Invalid request! Book not borrowed”`. If return book was successful then return true. Else return false.
   3. `void printDetails()`: Prints member details, including a list of borrowed books and their quantities. The format should be `“memberID name isbnOfBook numberOfBorrowedCopies”` (the entities are separated by a single space). For each book that is borrowed by the member the same format should be followed on a new line. If the member has not borrowed any book then print nothing.
  
-- **Member Constraints**:
-1. A member cannot borrow more than their `borrowLimit`.
-2. A member can borrow the same book multiple times if additional copies are available.
+- **Member Constraints**:  
+i. A member cannot borrow more than their `borrowLimit`.  
+ii. A member can borrow the same book multiple times if additional copies are available.
  
-4. **Library** – Represents a library
+4. **`Library`** – Represents a library
 - **Attributes**:  
   - `vector<Book>` books
   - `vector<Member>` members
