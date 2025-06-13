@@ -1,5 +1,4 @@
-# Project description
-
+# Library Management System
 ## Project Overview
 The objective of this project was to design and implement a robust Library Management System using Object-Oriented Programming principles in C++.
 The system models real-world library operations through three core classes: Book, Member, and Library. The Book class maintains information such as title, author, ISBN, available and total copies, with support for multiple constructors (including copy constructors and default arguments) and data validation to prevent logical inconsistencies (like negative book counts).
